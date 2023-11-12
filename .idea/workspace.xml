@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="76039b14-d916-4534-9d5e-da2b36ed4385" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BankInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +24,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2XPLOvooRocz7A87y0QFGbamBsJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -39,6 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/Users/hevila.santos/Documents/Estd/bankAccount/BankAccountControl",
     "onboarding.tips.debug.path": "C:/Users/Usuário/projects/BankAccountControl/src/Main.java"
   }
 }]]></component>
