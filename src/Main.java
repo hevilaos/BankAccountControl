@@ -8,9 +8,9 @@ public class Main {
         Scanner readUserAnswer = new Scanner(System.in);
 
         while (bankInterface.getUserWantsConsult()){
-            bankInterface.showBankMenu(clientBankAccount.getAccountBalance(), clientBankAccount.getClientName(), clientBankAccount.getAccountType());
+            bankInterface.showBankMenu(clientBankAccount);
             int bankOption = readUserAnswer.nextInt();
-            bankInterface.processingMenuOption(bankOption);
+            bankInterface.processingMenuOption(bankOption, clientBankAccount);
         }
     }
 }

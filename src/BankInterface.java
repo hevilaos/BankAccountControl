@@ -10,7 +10,7 @@ public class BankInterface {
         this.userWantsConsult = userWantsConsult;
     }
 
-    public void showBankMenu(double saldo, String cliente, String tipoConta)
+    public void showBankMenu(ClientBankAccount clientBankAccount)
     {
         String menu = """
                 ********************************
@@ -23,19 +23,22 @@ public class BankInterface {
                 ********************************
                 
                 Operações
-                1 - Consultar saldos
+                1 - Consultar saldo
                 2 - Receber valor
                 3 - Transferir valor
                 4 - Sair
                 
                 Digite a opção desejada:
-                """.formatted(cliente, tipoConta, saldo);
+                """.formatted(clientBankAccount.getClientName(), clientBankAccount.getAccountType(), clientBankAccount.getAccountBalance());
         System.out.println(menu);
     }
 
-    public void processingMenuOption(int menuOption){
+    public void processingMenuOption(int menuOption, ClientBankAccount clientBankAccount){
         switch (menuOption){
             case 1:
+                double saldo = clientBankAccount.getAccountBalance();
+                System.out.println("Saldo atual: R$ %.2f".formatted(saldo));
+                System.out.println();
                 break;
             case 2:
                 break;
