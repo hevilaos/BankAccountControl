@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class BankInterface {
 
     private boolean userWantsConsult = true;
@@ -28,12 +30,14 @@ public class BankInterface {
                 3 - Transferir valor
                 4 - Sair
                 
-                Digite a opção desejada:
                 """.formatted(clientBankAccount.getClientName(), clientBankAccount.getAccountType(), clientBankAccount.getAccountBalance());
         System.out.println(menu);
     }
 
-    public void processingMenuOption(int menuOption, ClientBankAccount clientBankAccount){
+    public void processingMenuOption(ClientBankAccount clientBankAccount){
+        Scanner readUserAnswer = new Scanner(System.in);
+        System.out.println("Digite a opção desejada: ");
+        int menuOption = readUserAnswer.nextInt();
         switch (menuOption){
             case 1:
                 double saldo = clientBankAccount.getAccountBalance();
@@ -41,6 +45,9 @@ public class BankInterface {
                 System.out.println();
                 break;
             case 2:
+                System.out.println("Digite o valor que deseja depositar: ");
+                double value = readUserAnswer.nextDouble();
+                clientBankAccount.depositValue(value);
                 break;
             case 3:
                 break;

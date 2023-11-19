@@ -5,12 +5,10 @@ public class Main {
 
         ClientBankAccount clientBankAccount = new ClientBankAccount();
         BankInterface bankInterface = new BankInterface();
-        Scanner readUserAnswer = new Scanner(System.in);
 
         while (bankInterface.getUserWantsConsult()){
             bankInterface.showBankMenu(clientBankAccount);
-            int bankOption = readUserAnswer.nextInt();
-            bankInterface.processingMenuOption(bankOption, clientBankAccount);
+            bankInterface.processingMenuOption(clientBankAccount);
         }
     }
 }

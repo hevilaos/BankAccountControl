@@ -27,4 +27,10 @@ public class ClientBankAccount {
     public void setAccountBalance(double accountBalance) {
         this.accountBalance = accountBalance;
     }
+
+    public void depositValue(double value){
+        double currentBalance = this.getAccountBalance();
+        double newBalance = currentBalance + value;
+        this.setAccountBalance(newBalance);
+    }
 }
