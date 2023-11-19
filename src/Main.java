@@ -1,13 +1,16 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
         ClientBankAccount clientBankAccount = new ClientBankAccount();
-        double saldo = clientBankAccount.getAccountBalance();
-        String clienteNome = clientBankAccount.getClientName();
-        String clienteConta = clientBankAccount.getAccountType();
-
         BankInterface bankInterface = new BankInterface();
+        Scanner readUserAnswer = new Scanner(System.in);
 
-        bankInterface.showBankMenu(saldo, clienteNome, clienteConta);
+        while (bankInterface.getUserWantsConsult()){
+            bankInterface.showBankMenu(clientBankAccount.getAccountBalance(), clientBankAccount.getClientName(), clientBankAccount.getAccountType());
+            int bankOption = readUserAnswer.nextInt();
+            bankInterface.processingMenuOption(bankOption);
+        }
     }
 }
