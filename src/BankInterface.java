@@ -46,10 +46,13 @@ public class BankInterface {
                 break;
             case 2:
                 System.out.println("Digite o valor que deseja depositar: ");
-                double value = readUserAnswer.nextDouble();
-                clientBankAccount.depositValue(value);
+                double valueC2 = readUserAnswer.nextDouble();
+                clientBankAccount.depositValue(valueC2);
                 break;
             case 3:
+                System.out.println("Digite o valor que deseja transferir de sua conta: ");
+                double valueC3 = readUserAnswer.nextDouble();
+                clientBankAccount.transferValue(valueC3);
                 break;
             case 4 :
                 this.setUserWantsConsult(false);

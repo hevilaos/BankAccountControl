@@ -33,4 +33,14 @@ public class ClientBankAccount {
         double newBalance = currentBalance + value;
         this.setAccountBalance(newBalance);
     }
+    public void transferValue(double value){
+        double currentBalance = this.getAccountBalance();
+        if(value<=currentBalance){
+            double newBalance = currentBalance-value;
+            this.setAccountBalance(newBalance);
+        }else {
+            System.out.println("Erro: Não é possível efetuar essa transferência.");
+            System.out.println("O valor de transferência é maior que o saldo atual.");
+        }
+    }
 }
